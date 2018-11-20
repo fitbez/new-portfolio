@@ -1,10 +1,3 @@
-body {
-  background: #fff;
-  height: 100%;
-  margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.5; }
-
 .menu-btn {
   position: absolute;
   z-index: 4;
@@ -91,3 +84,51 @@ ul.drop-menu li {
   100% {
     opacity: 1;
     transform: rotateY(0deg); } }
+
+body {
+  background: #f4f4f4;
+  height: 100%;
+  margin: 0;
+  font-family: "Source Code Pro", monospace;
+  line-height: 1.5; }
+
+header {
+  height: 3rem;
+  border-bottom: 0.5px solid #000;
+  background: #fff; }
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 400; }
+  h1.lg-heading,
+  h2.lg-heading,
+  h3.lg-heading {
+    font-weight: 6rem; }
+  h1:sm-heading,
+  h2:sm-heading,
+  h3:sm-heading {
+    margin-bottom: 2rem;
+    padding: 0.2rem 1rem;
+    background: #fcfcfc; }
+
+.text-secondary {
+  color: #c0e48e; }
+
+main {
+  text-align: center;
+  padding: 4rem;
+  height: 100%; }
+  main .icons {
+    margin-top: 1rem; }
+    main .icons a {
+      padding: 0.4rem;
+      text-decoration: none; }
+      main .icons a:hover {
+        color: #c0e48e;
+        transition: all 0.5s ease-out; }
+  main#home {
+    overflow: hidden; }
+    main#home h1 {
+      margin-top: 10vh; }

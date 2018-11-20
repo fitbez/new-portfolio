@@ -1,0 +1,95 @@
+.menu-btn {
+  position: absolute;
+  z-index: 4;
+  left: 35;
+  top: 35;
+  cursor: pointer;
+  list-style-type: none;
+}
+
+.btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #000;
+
+  &:hover {
+    background: $secondary-color;
+  }
+}
+
+ul.drop-menu {
+  position: relative;
+  top: 100%;
+  left: 20;
+  width: 150px;
+  padding: 0;
+}
+li {
+  text-align: center;
+  width: 150;
+  height: 65;
+  line-height: 65px;
+  position: relative;
+  text-transform: uppercase;
+  font-size: 14px;
+  background: #666;
+  cursor: pointer;
+
+  &:hover {
+    background: #606060;
+  }
+
+  &:last-child {
+    border-radius: 0px 0px 5px 5px;
+  }
+
+  a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+  }
+}
+
+// Defualt Triger
+
+ul.drop-menu li {
+  display: none; // HIDE
+}
+
+.menu-btn:hover > ul.drop-menu li {
+  display: block; // SHOW
+}
+
+.menu-btn:hover > ul.drop-menu {
+  perspective: 1000px;
+
+  li {
+    opacity: 0;
+    transform-origin: top center;
+    @for $i from 1 to 5 {
+      &:nth-child(#{$i}) {
+        animation-name: menu1;
+        animation-duration: 300ms;
+        animation-delay: (225ms * $i) - 200;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  @keyframes menu1 {
+    0% {
+      opacity: 0;
+      transform: rotateX(-90deg);
+    }
+
+    60% {
+      transform: rotateX(40deg);
+    }
+
+    100% {
+      opacity: 1;
+      transform: rotateY(0deg);
+    }
+  }
+}
