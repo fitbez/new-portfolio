@@ -66,7 +66,7 @@ ul.drop-menu li {
   li {
     opacity: 0;
     transform-origin: top center;
-    @for $i from 1 to 5 {
+    @for $i from 1 to 6 {
       &:nth-child(#{$i}) {
         animation-name: menu1;
         animation-duration: 300ms;

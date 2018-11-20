@@ -74,6 +74,12 @@ ul.drop-menu li {
       animation-delay: 700ms;
       animation-timing-function: ease-in-out;
       animation-fill-mode: forwards; }
+    .menu-btn:hover > ul.drop-menu li:nth-child(5) {
+      animation-name: menu1;
+      animation-duration: 300ms;
+      animation-delay: 925ms;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards; }
 
 @keyframes menu1 {
   0% {
