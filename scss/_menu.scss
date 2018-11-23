@@ -37,7 +37,9 @@ li {
   cursor: pointer;
 
   &:hover {
-    background: #606060;
+    z-index: 4;
+    background: $secondary-color;
+    opacity: 0.7;
   }
 
   &:last-child {
