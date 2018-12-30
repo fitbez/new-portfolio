@@ -1,0 +1,56 @@
+.skill {
+  position: relative;
+}
+
+ul.skills {
+  background-color: #f1f1f1;
+  display: flex;
+  flex-flow: row wrap;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+
+  li {
+    align-content: space-around;
+    flex-basis: 150px;
+  }
+}
+
+.heading {
+  position: relative;
+  font-weight: 800;
+  font-size: 40px;
+  letter-spacing: 1px;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin-top: 30px;
+}
+
+@media (min-width: 1200px) {
+  h1.lg-heading {
+    font-size: 5rem;
+  }
+}
+
+@media (max-width: 800px) {
+  h1.lg-heading {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  h1.lg-heading {
+    font-size: 2.5rem;
+  }
+  h2.sm-heading {
+    font-size: 1.5rem;
+  }
+
+  .skill {
+    position: relative;
+    margin-top: 300px;
+  }
+}
