@@ -96,3 +96,23 @@ ul.drop-menu li {
     }
   }
 }
+
+.name {
+  float: right;
+  display: block;
+  margin: 10px;
+}
+
+@media (max-width: 600px) {
+  .name span {
+    visibility: hidden;
+  }
+  .name::after {
+    content: "FB";
+    visibility: visible;
+    display: block;
+    color: #333;
+    float: right;
+    margin-right: 70px;
+  }
+}

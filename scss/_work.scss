@@ -19,6 +19,7 @@
   padding: 70px 0;
   width: 100%;
   text-align: center;
+  height: 100vh;
 }
 
 .my-portfolio .item {
@@ -81,9 +82,9 @@
   font-weight: 300;
 }
 
-.my-portfolio .image img:hover {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.5)";
-}
+// .my-portfolio .image img:hover {
+//   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.5)";
+// }
 
 .summary {
   font-size: 12px;

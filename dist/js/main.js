@@ -63,3 +63,63 @@ function init() {
   // Init TypeWriter
   new TypeWriter(txtElement, words, wait);
 }
+
+// Contact
+
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyCI4kO5da4p8d-A63qwxo4JUeileOY9soc",
+  authDomain: "contact-form-7efc2.firebaseapp.com",
+  databaseURL: "https://contact-form-7efc2.firebaseio.com",
+  projectId: "contact-form-7efc2",
+  storageBucket: "contact-form-7efc2.appspot.com",
+  messagingSenderId: "712976695586"
+};
+firebase.initializeApp(config);
+
+// Refernce messages collection
+var messageRef = firebase.database().ref("messages");
+
+// Listen for form submit
+document.getElementById("contactForm").addEventListener("submit", submitForm);
+
+// Submit Form
+function submitForm(e) {
+  e.preventDefault();
+
+  //Get values
+  var name = getInputVal("name");
+  var email = getInputVal("email");
+  var phone = getInputVal("phone");
+  var message = getInputVal("message");
+
+  // Save Message
+  saveMessage(name, email, phone, message);
+
+  //Show alert
+  document.querySelector(".alert").style.display = "block";
+
+  //Hide alert after 3 second
+  setTimeout(function() {
+    document.querySelector(".alert").style.display = "none";
+  }, 3000);
+
+  // Clear Form
+  document.getElementById("contactForm").reset();
+}
+
+// Function to get form values
+function getInputVal(id) {
+  return document.getElementById(id).value;
+}
+
+// Save message to firebase
+function saveMessage(name, email, phone, message) {
+  var newMessageRef = messageRef.push();
+  newMessageRef.set({
+    name: name,
+    email: email,
+    phone: phone,
+    message: message
+  });
+}

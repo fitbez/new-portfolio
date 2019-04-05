@@ -1,19 +1,66 @@
 .skill {
   position: relative;
+  height: 100vh;
 }
 
 ul.skills {
-  background-color: #f1f1f1;
   display: flex;
   flex-flow: row wrap;
   list-style-type: none;
   justify-content: center;
   align-items: center;
   height: auto;
-
   li {
     align-content: space-around;
     flex-basis: 150px;
+    animation: slidein 3s linear 1s infinite running;
+  }
+
+  &:hover {
+    .title {
+      display: block;
+      margin-top: 25px;
+      font-size: 21px;
+      animation: fadein 3s;
+      -moz-animation: fadein 3s; /* Firefox */
+      -webkit-animation: fadein 3s; /* Safari and Chrome */
+      -o-animation: fadein 3s; /* Opera */
+    }
+    @keyframes fadein {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @-moz-keyframes fadein {
+      /* Firefox */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @-webkit-keyframes fadein {
+      /* Safari and Chrome */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @-o-keyframes fadein {
+      /* Opera */
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 }
 
@@ -29,6 +76,9 @@ ul.skills {
   margin-top: 30px;
 }
 
+.title {
+  display: none;
+}
 @media (min-width: 1200px) {
   h1.lg-heading {
     font-size: 5rem;
@@ -38,6 +88,10 @@ ul.skills {
 @media (max-width: 800px) {
   h1.lg-heading {
     font-size: 3rem;
+  }
+  .skill {
+    position: relative;
+    margin-top: 32rem;
   }
 }
 
@@ -51,6 +105,7 @@ ul.skills {
 
   .skill {
     position: relative;
-    margin-top: 300px;
+    margin-top: 32rem;
+    overflow-x: hidden;
   }
 }
